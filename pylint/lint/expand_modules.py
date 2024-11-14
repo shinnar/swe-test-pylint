@@ -131,7 +131,7 @@ def expand_modules(
                     "basename": modname,
                 }
             )
-        has_init = (
+        has_init = is_namespace or (
             not (modname.endswith(".__init__") or modname == "__init__")
             and os.path.basename(filepath) == "__init__.py"
         )
